@@ -4,9 +4,7 @@ include("conexao.php");
 
 $user_id = $_SESSION['id'];
 
-/* =========================
-   BUSCA DE USUÁRIOS
-========================= */
+
 $busca = isset($_GET['busca']) ? $_GET['busca'] : '';
 
 $sqlUsuarios = "SELECT id, nome 
@@ -17,9 +15,7 @@ $sqlUsuarios = "SELECT id, nome
 $usuarios = $conn->query($sqlUsuarios);
 
 
-/* =========================
-   AMIGOS (CONEXÕES ACEITAS)
-========================= */
+
 $sqlAmigos = "SELECT u.id, u.nome
               FROM conexoes c
               JOIN usuarios u 
@@ -54,7 +50,7 @@ $amigos = $conn->query($sqlAmigos);
 
 <div class="container">
 
-    <!-- ================= BUSCA ================= -->
+
     <h2>Buscar novos amigos</h2>
 
     <form method="GET">
@@ -75,7 +71,7 @@ $amigos = $conn->query($sqlAmigos);
     <?php } ?>
 
 
-    <!-- ================= AMIGOS ================= -->
+    
     <h2>Seus amigos</h2>
 
     <?php while($a = $amigos->fetch_assoc()) { ?>
