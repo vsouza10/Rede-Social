@@ -1,243 +1,182 @@
-body{
-    font-family: arial;
+
+* {
     margin: 0;
-    background: #f4f4f4;
-
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header{
-    background: #2c7be5;
-    color: white;
-    padding: 15px;
-    text-align: center;
+body {
+    background: #f4f6f9;
+    color: #1f2937;
 }
 
-.container{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
 
-.post{
-    background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 8px rgba(0,0,0.1);
-}
-
-.post h3{
-    margin-bottom: 5px;
-    color: #2c7be5;
-}
-
-button{
-    padding: 8px;
-    margin-top: 5px;
-    background: #2c7be5;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover{
-    background: #1a5bb8;
-}
-
-input, textarea{
-    width:100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.amigo{
+.topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
-    padding: 12px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 6px rgba(0,0,0.1);
+    background: #1e293b;
+    padding: 15px 40px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.acoes button{
+.menu a {
+    color: white;
+    margin-left: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.post,
+.post-card,
+.form-post,
+.amigo {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* títulos dos posts */
+.post h3 {
+    color: #2c7be5;
+    margin-bottom: 6px;
+}
+
+.perfil {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.perfil h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.info h3 {
+    color: #2c7be5;
+    margin-bottom: 8px;
+}
+
+
+.amigo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acoes button {
     margin-left: 8px;
 }
 
 
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
 
-/* Estilização login */
+input:focus, textarea:focus {
+    border-color: #2c7be5;
+}
 
-.login-container{
+button {
+    padding: 8px 12px;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1a5bb8;
+}
+
+/* botões de ações */
+.acoes button:first-child {
+    background: #ef4444;
+}
+
+.acoes button:last-child {
+    background: #22c55e;
+}
+
+/* ================= LOGIN ================= */
+.login-container {
     width: 350px;
     margin: 50px auto;
     background: white;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
 
-.login-container h2{
+.login-container h2 {
     text-align: center;
     margin-bottom: 20px;
-
 }
 
-.login-container input{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-
+/* botão limpar */
+.limpar {
+    background: #6b7280;
 }
 
-.login-container button{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background: #2c7be5;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+.limpar:hover {
+    background: #4b5563;
 }
 
-.login-container button:hover{
-    background: #1a5bb8;
-}
 
-.limpar{
-    background: #777;
-
-}
-
-.limpar:hover{
-    background: #555;
-}
-
-.recuperar{
-    text-align: center;
-}
-
-/* Estilização cabeçalho  */
-
-.topo{
-    display: flex;
-justify-content: space-between;
-align-items: center;
-background:#1e293b ;
-padding: 15px 40px;
-color: white;
-}
-
-.logo h2{
-    margin: 0;
-    font-size: 22px;
-
-}
-
-.menu a{
-    color: white;
-    margin-left: 20px;
-text-decoration: none;
-font-weight: bold;
-transition: 0.3s;
-}
-
-.menu a:hover{
-    color: #38bdf8;
-}
-
-/* Estilização perfil do usuario */
-
-.perfil{
-    width: 80%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.perfil h2{
-    text-align: center;
-    margin-bottom: 20px;
-
-}
-
-.info-box{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.info{
-    background: white;
-    padding: 20px;
-    margin: 10px;
-    width: 180px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px rgba(0,0,0.1);
-}
-
-.info h3{
-    margin-bottom: 10px;
-    color: #2c7be5;
-}
-
-/* Estilização do historico */
-
-.post-card{
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0,0,0.1);
-}
-
-.post-header{
+.post-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #555;
-
-}
-
-.post-content{
-    font-size: 16px;
+    font-size: 13px;
+    color: #6b7280;
     margin-bottom: 10px;
 }
 
-.post-actions button{
-    margin-right: 5px;
-}
-
-.form-post{
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0,0,0.1);
-}
-
-.form-post textarea{
-    width: 100%;
-    height: 80px;
-    padding: 10px;
-    margin-top: 10px;
+.post-content {
     margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
 }
 
-.form-post button{
-    background: #2c7be5;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.post-actions button {
+    margin-right: 6px;
 }
